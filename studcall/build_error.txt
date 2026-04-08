@@ -1,0 +1,66 @@
+﻿
+> studcall@0.1.0 build
+> next build
+
+  Ôû▓ Next.js 14.2.11
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully
+   Linting and checking validity of types ...
+node.exe : Failed to compile.
+Au caractère Ligne:1 : 1
++ & "C:\Program 
+Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp 
+   ecified: (Failed to compile.:St  
+  ring) [], RemoteException
+    + FullyQualifiedErrorId : Nativ 
+   eCommandError
+ 
+
+./src/app/teacher/teacher-dashboard.
+tsx:115:59
+Type error: Parameter 'idx' 
+implicitly has an 'any' type.
+
+[0m [90m 113 |[39m               
+       ) [33m:[39m ([0m
+[0m [90m 114 |[39m               
+           [33m<[39m[33mdiv[39m 
+className[33m=[39m[32m"grid 
+gap-3"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 115 
+|[39m                              
+{attendanceStats[33m.[39mmap((s[3
+3m:[39many[33m,[39m idx) 
+[33m=>[39m ([0m
+[0m [90m     |[39m               
+                                    
+        [31m[1m^[22m[39m[0m
+[0m [90m 116 |[39m               
+                   
+[33m<[39m[33mdiv[39m 
+key[33m=[39m{s[33m.[39mid 
+[33m||[39m idx} 
+className[33m=[39m[32m"flex 
+items-center justify-between p-4 
+rounded-xl bg-card border 
+border-white/5 hover:bg-card/80 tran
+sition-colors"[39m[33m>[39m[0m
+[0m [90m 117 |[39m               
+                       
+[33m<[39m[33mdiv[39m 
+className[33m=[39m[32m"flex 
+items-center 
+gap-4"[39m[33m>[39m[0m
+[0m [90m 118 |[39m               
+                           
+[33m<[39m[33mdiv[39m 
+className[33m=[39m[32m"w-10 h-10 
+rounded-full bg-secondary flex 
+items-center justify-center 
+font-bold 
+text-sm"[39m[33m>[39m[0m
