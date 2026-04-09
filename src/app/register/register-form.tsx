@@ -64,7 +64,7 @@ export function RegisterForm() {
         </div>
         <CardTitle className="text-2xl font-bold">Inscription StudCall</CardTitle>
         <CardDescription>
-          Créez votre compte. L'administrateur validera votre accès.
+          Créez votre compte. L&apos;administrateur validera votre accès.
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleRegister}>

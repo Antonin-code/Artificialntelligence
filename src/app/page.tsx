@@ -61,9 +61,9 @@ export default function Home() {
               Sécurisez la présence en un clic. StudCall automatise l'émargement pour vous permettre de vous concentrer sur ce qui compte : la transmission du savoir.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/register" className="w-full sm:w-auto">
+              <Link href="/login" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full text-lg px-8 py-7 rounded-full shadow-xl shadow-primary/20">
-                  Démarrer avec StudCall
+                  Accéder à la plateforme
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
@@ -130,6 +130,21 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
+              <Card className="glass-panel border-white/5">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                    <Smartphone className="w-6 h-6" />
+                  </div>
+                  <CardTitle>100% Autonome</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Les étudiants valident eux-mêmes. Fini l'appel manuel chronophage pour l'enseignant.</p>
+                </CardContent>
+              </Card>
+              <div className="hidden">
+                <span>Géolocalisé</span>
+                <span>Temps Réel</span>
+              </div>
           </div>
         </section>
 

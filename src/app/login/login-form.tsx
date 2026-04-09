@@ -69,7 +69,7 @@ export function LoginForm() {
       </CardHeader>
       <form onSubmit={handleLogin}>
         <CardContent className="space-y-5">
-          {error && <div className="p-3 bg-destructive/20 text-destructive-foreground text-sm rounded-md border border-destructive/50 text-center">{error}</div>}
+          {error && <div role="alert" aria-live="assertive" className="p-3 bg-destructive/20 text-destructive-foreground text-sm rounded-md border border-destructive/50 text-center">{error}</div>}
           <div className="space-y-3">
             <Label htmlFor="email" className="text-muted-foreground ml-1">Adresse Email</Label>
             <Input 
@@ -79,7 +79,8 @@ export function LoginForm() {
               className="h-12"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required 
+              required
+              aria-invalid={!!error}
             />
           </div>
           <div className="space-y-3">
@@ -93,16 +94,17 @@ export function LoginForm() {
               className="h-12"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required 
+              required
+              aria-invalid={!!error}
             />
           </div>
         </CardContent>
         <CardFooter className="pt-2 pb-8 flex-col gap-4">
-          <Button type="submit" size="lg" className="w-full h-12 text-md" disabled={loading}>
+          <Button type="submit" size="lg" className="w-full h-12 text-md" disabled={loading} aria-busy={loading}>
             {loading ? "Vérification en cours..." : "Se connecter"}
           </Button>
           <div className="text-sm text-center text-muted-foreground">
-             Pas encore de compte ? <a href="/register" className="text-primary font-semibold hover:underline">S'inscrire gratuitement</a>
+             Pas encore de compte ? <a href="/register" className="text-primary font-semibold hover:underline">S&apos;inscrire gratuitement</a>
           </div>
         </CardFooter>
       </form>

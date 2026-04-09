@@ -53,7 +53,7 @@ export function AdminDashboard({ users, groups, pendingUsers }: any) {
   }
 
   const handleDeleteUser = async (id: string) => {
-      if(!confirm("Voulez-vous suspendre l'accès de cet utilisateur ? Son compte repassera en 'refusé' et il devra vous contacter pour le réactiver.")) return;
+      if(!confirm("Voulez-vous suspendre l&apos;accès de cet utilisateur ? Son compte repassera en 'refusé' et il devra vous contacter pour le réactiver.")) return;
       setIsDeletingUser(id)
       await banUserAccount(id)
       setIsDeletingUser(null)
@@ -72,7 +72,7 @@ export function AdminDashboard({ users, groups, pendingUsers }: any) {
   }
 
   const handleDeleteGroup = async (id: string) => {
-      if(!confirm("Êtes-vous sûr de vouloir supprimer ce groupe ? Cette action est irréversible et supprimera tout l'historique d'appel de ce groupe.")) return;
+      if(!confirm("Êtes-vous sûr de vouloir supprimer ce groupe ? Cette action est irréversible et supprimera tout l&apos;historique d&apos;appel de ce groupe.")) return;
       setIsDeletingGroup(id)
       await deleteGroup(id)
       setIsDeletingGroup(null)
@@ -133,8 +133,8 @@ export function AdminDashboard({ users, groups, pendingUsers }: any) {
               </CardHeader>
               <CardContent>
                   {pendingUsers.length === 0 ? (
-                      <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
-                          Aucune demande d'inscription en attente.
+                       <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
+                          Aucune demande d&apos;inscription en attente.
                       </div>
                   ) : (
                       <div className="space-y-3">
@@ -263,7 +263,7 @@ export function AdminDashboard({ users, groups, pendingUsers }: any) {
                            </Button>
                            {editingGroupId && (
                                <Button variant="outline" className="w-full mt-2 border-white/20 hover:bg-white/5" onClick={handleCancelEdit}>
-                                   Annuler l'édition
+                                   Annuler l&apos;édition
                                </Button>
                            )}
                       </div>

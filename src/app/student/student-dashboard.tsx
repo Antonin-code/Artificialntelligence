@@ -7,7 +7,13 @@ import { MapPin, CheckCircle2, XCircle, AlertCircle, Loader2 } from "lucide-reac
 import { submitAttendance } from "@/lib/actions"
 import { getDistanceClient } from "@/lib/utils"
 
-export function StudentDashboard({ activeSession, studentId, alreadyMarked }: any) {
+interface StudentDashboardProps {
+  activeSession: any; // Session type from Supabase would be better
+  studentId: string;
+  alreadyMarked?: boolean;
+}
+
+export function StudentDashboard({ activeSession, studentId, alreadyMarked }: StudentDashboardProps) {
   const [location, setLocation] = useState<{lat: number, lon: number} | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<"idle"|"loading"|"success"|"error">("idle")
@@ -26,7 +32,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
     }
   }, [activeSession, alreadyMarked])
 
-  if (alreadyMarked) {
+  if (alreadyMarked || status === "success") {
     return (
       <Card className="border-green-500/30 bg-green-500/5 shadow-[0_0_40px_rgba(34,197,94,0.1)]">
         <CardHeader className="text-center py-10">
@@ -35,7 +41,11 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
             <CheckCircle2 size={40} />
           </div>
           <CardTitle className="text-3xl font-extrabold text-green-500/90 mb-2">Présence Validée !</CardTitle>
-          <CardDescription className="text-lg">Vous êtes bien enregistré pour le cours de {activeSession.groups.name}.</CardDescription>
+          <CardDescription className="text-lg">
+            {alreadyMarked 
+              ? `Vous êtes bien enregistré pour le cours de ${activeSession?.groups?.name || 'votre groupe'}.`
+              : "Votre présence vient d&apos;être enregistrée avec succès."}
+          </CardDescription>
         </CardHeader>
       </Card>
     )
@@ -46,8 +56,8 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
       <Card className="glass-panel text-center py-16 px-4">
         <CardContent className="flex flex-col items-center justify-center text-muted-foreground p-0">
             <AlertCircle size={56} className="mb-6 opacity-40 text-primary" />
-            <p className="text-xl font-medium">Aucune session d'appel active</p>
-            <p className="text-base mt-2">Attendez que votre enseignant lance l'appel pour votre groupe.</p>
+            <p className="text-xl font-medium">Aucune session d&apos;appel active</p>
+            <p className="text-base mt-2">Attendez que votre enseignant lance l&apos;appel pour votre groupe.</p>
         </CardContent>
       </Card>
     )
@@ -74,22 +84,8 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
       setStatus("success")
     } else {
       setStatus("error")
-      setError(`Vous êtes à ${Math.round(dist)}m de l'école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
+      setError(`Vous êtes à ${Math.round(dist)}m de l&apos;école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
     }
-  }
-
-  if (status === "success" && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
-     return (
-      <Card className="border-green-500/30 bg-green-500/5 shadow-[0_0_40px_rgba(34,197,94,0.1)]">
-        <CardHeader className="text-center py-10">
-          <div className="mx-auto w-20 h-20 bg-green-500/20 text-green-500 flex items-center justify-center rounded-full mb-6">
-            <CheckCircle2 size={40} />
-          </div>
-          <CardTitle className="text-3xl font-extrabold text-green-500/90 mb-2">Présence Validée ! (Demo)</CardTitle>
-          <CardDescription className="text-lg">Simulation d'enregistrement Supabase réussie.</CardDescription>
-        </CardHeader>
-      </Card>
-     )
   }
 
   return (
@@ -113,7 +109,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
       </CardHeader>
       <CardContent className="pt-6">
         {error && (
-            <div className="mb-6 p-4 rounded-xl bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 text-sm">
+            <div role="alert" aria-live="assertive" className="mb-6 p-4 rounded-xl bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 text-sm">
                 <XCircle className="shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{error}</p>
             </div>
@@ -124,11 +120,11 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
                 <MapPin className={!location ? 'animate-bounce' : ''} />
             </div>
             <div>
-                <h4 className="font-semibold text-lg">{location ? "Position de votre appareil" : "Recherche GPS en cours..."}</h4>
-                <p className="text-sm text-muted-foreground mt-1 font-mono">
+                <h4 className="font-semibold text-lg" aria-live="polite">{location ? "Position de votre appareil" : "Recherche GPS en cours..."}</h4>
+                <p className="text-sm text-muted-foreground mt-1 font-mono" aria-live="polite">
                     {location 
                         ? `Lat: ${location.lat.toFixed(4)}, Lon: ${location.lon.toFixed(4)}` 
-                        : "Veuillez autoriser l'accès au navigateur."}
+                        : "Veuillez autoriser l&apos;accès au navigateur."}
                 </p>
             </div>
         </div>
@@ -139,6 +135,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
             className={`w-full text-lg h-14 rounded-xl transition-all duration-300 ${!location || status === "loading" ? 'opacity-80' : 'hover:scale-[1.02]'}`}
             disabled={!location || status === "loading"}
             onClick={handleAttendance}
+            aria-busy={status === "loading"}
         >
             {status === "loading" ? <Loader2 className="animate-spin mr-2" /> : <CheckCircle2 className="mr-2" />}
             Confirmer ma présence (à moins de {activeSession.radius}m)

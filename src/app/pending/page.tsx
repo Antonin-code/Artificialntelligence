@@ -17,13 +17,13 @@ export default function PendingPage({ searchParams }: { searchParams: { status?:
           <CardTitle className="text-2xl font-bold">{isRejected ? 'Inscription Refusée' : 'Compte en attente'}</CardTitle>
           <CardDescription className="text-base text-muted-foreground mt-4">
             {isRejected 
-              ? "Votre demande d'inscription a été refusée par l'administration. Si vous pensez qu'il s'agit d'une erreur, veuillez contacter votre scolarité."
-              : "Votre inscription a bien été enregistrée mais nécessite la validation manuelle d'un administrateur avant que vous puissiez accéder à la plateforme. Merci de réessayer plus tard."}
+              ? "Votre demande d&apos;inscription a été refusée par l&apos;administration. Si vous pensez qu&apos;il s&apos;agit d&apos;une erreur, veuillez contacter votre scolarité."
+              : "Votre inscription a bien été enregistrée mais nécessite la validation manuelle d&apos;un administrateur avant que vous puissiez accéder à la plateforme. Merci de réessayer plus tard."}
           </CardDescription>
         </CardHeader>
         <CardContent className="pb-10">
             <Link href="/">
-              <Button variant="outline" className="w-full h-12">Retour à l'accueil</Button>
+              <Button variant="outline" className="w-full h-12">Retour à l&apos;accueil</Button>
             </Link>
         </CardContent>
       </Card>

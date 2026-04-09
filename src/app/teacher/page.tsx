@@ -55,7 +55,7 @@ export default async function TeacherPage() {
           const allMembers = groupMembers
             ?.filter(gm => gm.group_id === g.id)
             ?.map(gm => Array.isArray(gm.users) ? gm.users[0] : gm.users) || []
-          // Ne conserver que les étudiants pour l'affichage de la liste et le comptage
+          // Ne conserver que les étudiants pour l&apos;affichage de la liste et le comptage
           const students = allMembers.filter((u: any) => u?.role === 'student')
           return { ...g, students }
       })

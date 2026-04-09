@@ -24,3 +24,8 @@ Les commentaires ne doivent jamais pallier un manque de clarté du code.
 ## 4. Respect du Standard et Exceptions
 - Ce standard de qualité n'est pas optionnel. Tout nouveau code qui y déroge sera rejeté.
 - **Cas d'exception :** Si, pour des raisons vitales (ex: optimisation de performance mathématique, limitation du framework embarqué), le code doit ignorer ces piliers, le motif justifiant ce non-respect doit être formellement documenté justifiant le "contournement" (ex: `// EXCEPTION (PERF):`).
+
+## 5. Validation Automatisée (CI/CD)
+Toutes les règles définies ci-dessus sont protégées par une pipeline d'intégration continue industrielle.
+- Aucun code ne doit être fusionné sans une exécution réussie de la pipeline.
+- Pour plus d'informations sur les étapes de validation, consultez le document [CI_CD.md](./CI_CD.md).
