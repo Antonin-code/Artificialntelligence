@@ -1,0 +1,26 @@
+{
+  "strict_scope": true,
+  "commit_convention": "conventional_commits",
+  "validation_steps": [
+    "tests",
+    "lint",
+    "security_scan",
+    "docs_update"
+  ],
+  "security_and_safeguards": {
+    "max_function_lines": 50,
+    "restricted_files": [
+      ".env",
+      "master_key.json",
+      "security_policy.md"
+    ]
+  },
+  "traceability": {
+    "checkpoints_enabled": true,
+    "decision_log_file": "DECISIONS.md"
+  },
+  "agent_rules_file": "./AGENT_RULES.md",
+  "agent_safeguards_file": "./AGENT_SAFEGUARDS.md",
+  "code_quality_standards_file": "./CODE_QUALITY_STANDARDS.md",
+  "custom_instructions": "1. [STRATEGY] : Avant tout changement de structure de données, tu dois générer un bloc [STRATEGY] expliquant ton choix et attendre la validation [OK]. 2. [GRANULARITÉ] : Il t'est interdit de générer ou modifier des fonctions pour qu'elles dépassent 50 lignes, afin d'assurer la maintenabilité. 3. [TRAÇABILITÉ] : À chaque fin de tâche (Checkpoint), tu dois systématiquement créer ou mettre à jour un fichier DECISIONS.md expliquant ce que tu as fait et pourquoi."
+}

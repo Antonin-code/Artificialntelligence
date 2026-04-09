@@ -7,5 +7,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dossiers build
-.next/
+**/.next/
 dist/
