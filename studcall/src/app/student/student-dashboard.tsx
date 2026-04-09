@@ -7,7 +7,13 @@ import { MapPin, CheckCircle2, XCircle, AlertCircle, Loader2 } from "lucide-reac
 import { submitAttendance } from "@/lib/actions"
 import { getDistanceClient } from "@/lib/utils"
 
-export function StudentDashboard({ activeSession, studentId, alreadyMarked }: any) {
+interface StudentDashboardProps {
+  activeSession: any; // Session type from Supabase would be better
+  studentId: string;
+  alreadyMarked?: boolean;
+}
+
+export function StudentDashboard({ activeSession, studentId, alreadyMarked }: StudentDashboardProps) {
   const [location, setLocation] = useState<{lat: number, lon: number} | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<"idle"|"loading"|"success"|"error">("idle")
@@ -26,7 +32,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
     }
   }, [activeSession, alreadyMarked])
 
-  if (alreadyMarked) {
+  if (alreadyMarked || status === "success") {
     return (
       <Card className="border-green-500/30 bg-green-500/5 shadow-[0_0_40px_rgba(34,197,94,0.1)]">
         <CardHeader className="text-center py-10">
@@ -35,7 +41,11 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
             <CheckCircle2 size={40} />
           </div>
           <CardTitle className="text-3xl font-extrabold text-green-500/90 mb-2">Présence Validée !</CardTitle>
-          <CardDescription className="text-lg">Vous êtes bien enregistré pour le cours de {activeSession.groups.name}.</CardDescription>
+          <CardDescription className="text-lg">
+            {alreadyMarked 
+              ? `Vous êtes bien enregistré pour le cours de ${activeSession?.groups?.name || 'votre groupe'}.`
+              : "Votre présence vient d'être enregistrée avec succès."}
+          </CardDescription>
         </CardHeader>
       </Card>
     )
@@ -76,20 +86,6 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: an
       setStatus("error")
       setError(`Vous êtes à ${Math.round(dist)}m de l'école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
     }
-  }
-
-  if (status === "success" && !process.env.NEXT_PUBLIC_SUPABASE_URL) {
-     return (
-      <Card className="border-green-500/30 bg-green-500/5 shadow-[0_0_40px_rgba(34,197,94,0.1)]">
-        <CardHeader className="text-center py-10">
-          <div className="mx-auto w-20 h-20 bg-green-500/20 text-green-500 flex items-center justify-center rounded-full mb-6">
-            <CheckCircle2 size={40} />
-          </div>
-          <CardTitle className="text-3xl font-extrabold text-green-500/90 mb-2">Présence Validée ! (Demo)</CardTitle>
-          <CardDescription className="text-lg">Simulation d'enregistrement Supabase réussie.</CardDescription>
-        </CardHeader>
-      </Card>
-     )
   }
 
   return (

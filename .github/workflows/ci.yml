@@ -1,0 +1,48 @@
+name: StudCall Industrial CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  quality-assurance:
+    name: Code Quality and Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: studcall/package-lock.json
+
+    - name: Install Dependencies
+      run: npm ci
+      working-directory: studcall
+
+    - name: Linting Check
+      run: npm run lint
+      working-directory: studcall
+
+    - name: Type Checking
+      run: npx tsc --noEmit
+      working-directory: studcall
+
+    - name: Unit & Integration Tests
+    # This runs Vitest with all the tests we created in US29 and US30
+      run: npm test
+      working-directory: studcall
+
+    - name: Production Build Check
+    # Ensures the Next.js app can be successfully compiled for production
+      run: npm run build
+      working-directory: studcall
+      env:
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
