@@ -2,9 +2,9 @@ name: StudCall Industrial CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, 'features/*' ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, develop, 'features/*' ]
 
 jobs:
   quality-assurance:
