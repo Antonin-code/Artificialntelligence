@@ -109,7 +109,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
       </CardHeader>
       <CardContent className="pt-6">
         {error && (
-            <div className="mb-6 p-4 rounded-xl bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 text-sm">
+            <div role="alert" aria-live="assertive" className="mb-6 p-4 rounded-xl bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 text-sm">
                 <XCircle className="shrink-0 mt-0.5" />
                 <p className="leading-relaxed">{error}</p>
             </div>
@@ -120,8 +120,8 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
                 <MapPin className={!location ? 'animate-bounce' : ''} />
             </div>
             <div>
-                <h4 className="font-semibold text-lg">{location ? "Position de votre appareil" : "Recherche GPS en cours..."}</h4>
-                <p className="text-sm text-muted-foreground mt-1 font-mono">
+                <h4 className="font-semibold text-lg" aria-live="polite">{location ? "Position de votre appareil" : "Recherche GPS en cours..."}</h4>
+                <p className="text-sm text-muted-foreground mt-1 font-mono" aria-live="polite">
                     {location 
                         ? `Lat: ${location.lat.toFixed(4)}, Lon: ${location.lon.toFixed(4)}` 
                         : "Veuillez autoriser l&apos;accès au navigateur."}
@@ -135,6 +135,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
             className={`w-full text-lg h-14 rounded-xl transition-all duration-300 ${!location || status === "loading" ? 'opacity-80' : 'hover:scale-[1.02]'}`}
             disabled={!location || status === "loading"}
             onClick={handleAttendance}
+            aria-busy={status === "loading"}
         >
             {status === "loading" ? <Loader2 className="animate-spin mr-2" /> : <CheckCircle2 className="mr-2" />}
             Confirmer ma présence (à moins de {activeSession.radius}m)
