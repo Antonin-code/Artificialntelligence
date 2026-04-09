@@ -4,107 +4,137 @@
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
         "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
-        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
+        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/student/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
-        "app/admin/page": "rsc"
+        "app/admin/page": "rsc",
+        "app/teacher/page": "rsc",
+        "app/student/page": "rsc"
       }
     },
     "4368e81ff715eaa70364c61e92279a793309b9fa": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
         "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
-        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
+        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/student/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
-        "app/admin/page": "rsc"
+        "app/admin/page": "rsc",
+        "app/teacher/page": "rsc",
+        "app/student/page": "rsc"
       }
     },
     "817a3542297ab8a0d6a46a493ef0e4f35314459b": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
         "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
-        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
+        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/student/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
-        "app/admin/page": "rsc"
+        "app/admin/page": "rsc",
+        "app/teacher/page": "rsc",
+        "app/student/page": "rsc"
       }
     },
     "ed5cd64a47b9fd3e4ca6e2d63c0f6e8782d72dca": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
         "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
-        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
+        "app/admin/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!",
+        "app/student/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22createSession%22%2C%22submitAttendance%22%2C%22closeSession%22%2C%22signOut%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
         "app/login/page": "rsc",
-        "app/admin/page": "rsc"
+        "app/admin/page": "rsc",
+        "app/teacher/page": "rsc",
+        "app/student/page": "rsc"
       }
     },
     "49e9372c1f14796edbe62514f5d874a9142ed2a3": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "678d5d60c9913083fc304d962bc21b9b1ff2e442": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "ac50dc2f9af5fbac18a6a18fea5aa9a61a204460": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "b662dab0931b90345fa29cf083d0117996a493be": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "b82e09f8e1b5ee7e3312a5defbd4f52107e9c132": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "de0b42fc9f8ab2071defbca77d3f0ff5d2e961c5": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     },
     "fb3848ef79978a7d71964dc252bd77f589b13c3a": {
       "workers": {
-        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
+        "app/admin/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!",
+        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22createGroup%22%2C%22deleteGroup%22%2C%22approveUserAccount%22%2C%22updateUserAccount%22%2C%22rejectUserAccount%22%2C%22updateGroup%22%2C%22banUserAccount%22%5D%5D%5D&__client_imported__=true!"
       },
       "layer": {
-        "app/admin/page": "action-browser"
+        "app/admin/page": "action-browser",
+        "app/teacher/page": "action-browser"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "aqLHuN/Ed0GkTRvSmNJkjM5iWrFvTquSz3kTrJ61T2o="
+  "encryptionKey": "PmX5HjII3ghttuF5Va0VnY61/QV4hWAcFsMkzMfwQhE="
 }
