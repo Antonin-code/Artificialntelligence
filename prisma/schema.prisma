@@ -8,70 +8,80 @@ datasource db {
 }
 
 enum Role {
-  ADMIN
-  TEACHER
-  STUDENT
+  admin
+  teacher
+  student
+}
+
+enum AccountStatus {
+  pending
+  approved
+  rejected
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  password  String
+  id        String        @id @default(uuid())
+  email     String        @unique
+  role      Role          @default(student)
   name      String
-  role      Role     @default(STUDENT)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  status    AccountStatus @default(pending)
+  createdAt DateTime      @default(now()) @map("created_at")
 
-  // Teacher relationships
-  taughtGroups Group[] @relation("TaughtGroups")
-
-  // Student relationships
-  enrolledGroups GroupMember[]
+  // Relationships
+  taughtGroups    Group[]             @relation("TaughtGroups")
+  enrolledGroups  GroupMember[]
   attendanceRecords AttendanceRecord[]
+
+  @@map("users")
 }
 
 model Group {
   id        String   @id @default(uuid())
   name      String
-  teacherId String
+  teacherId String   @map("teacher_id")
   teacher   User     @relation("TaughtGroups", fields: [teacherId], references: [id])
-  createdAt DateTime @default(now())
+  createdAt DateTime @default(now()) @map("created_at")
 
   members   GroupMember[]
   sessions  AttendanceSession[]
+
+  @@map("groups")
 }
 
 model GroupMember {
-  groupId   String
-  studentId String
-  group     Group    @relation(fields: [groupId], references: [id])
-  student   User     @relation(fields: [studentId], references: [id])
+  groupId   String @map("group_id")
+  studentId String @map("student_id")
+  group     Group  @relation(fields: [groupId], references: [id])
+  student   User   @relation(fields: [studentId], references: [id])
 
   @@id([groupId, studentId])
+  @@map("group_students")
 }
 
 model AttendanceSession {
-  id         String   @id @default(uuid())
-  groupId    String
-  group      Group    @relation(fields: [groupId], references: [id])
-  isActive   Boolean  @default(true)
+  id         String            @id @default(uuid())
+  groupId    String            @map("group_id")
+  group      Group             @relation(fields: [groupId], references: [id])
+  isActive   Boolean           @default(true) @map("is_active")
   latitude   Float
   longitude  Float
-  radius     Float    @default(100.0) // in meters
-  createdAt  DateTime @default(now())
-  closedAt   DateTime?
-
+  radius     Float             @default(100.0)
+  createdAt  DateTime          @default(now()) @map("created_at")
+  closedAt   DateTime?         @map("closed_at")
   records    AttendanceRecord[]
+
+  @@map("attendance_sessions")
 }
 
 model AttendanceRecord {
   id        String            @id @default(uuid())
-  sessionId String
+  sessionId String            @map("session_id")
   session   AttendanceSession @relation(fields: [sessionId], references: [id])
-  studentId String
+  studentId String            @map("student_id")
   student   User              @relation(fields: [studentId], references: [id])
   status    String            @default("present")
   timestamp DateTime          @default(now())
 
   @@unique([sessionId, studentId])
+  @@map("attendance_records")
 }

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { MapPin, CheckCircle2, XCircle, AlertCircle, Loader2 } from "lucide-react"
 import { submitAttendance } from "@/lib/actions"
 import { getDistanceClient } from "@/lib/utils"
+import { useToast } from "@/components/ui/toaster-minimal"
 
 interface StudentDashboardProps {
   activeSession: any; // Session type from Supabase would be better
@@ -18,6 +19,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<"idle"|"loading"|"success"|"error">("idle")
   const [distance, setDistance] = useState<number | null>(null)
+  const { toast } = useToast()
 
   useEffect(() => {
     if (activeSession && !alreadyMarked) {
@@ -63,29 +65,39 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
     )
   }
 
+  const retryLocation = () => {
+    setLocation(null);
+    setError(null);
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+          (err) => setError("Veuillez autoriser la géolocalisation pour émarger.")
+        )
+    }
+  }
+
   const handleAttendance = async () => {
     if (!location) return;
     setStatus("loading")
+    setError(null)
     
     // Simulate real delay
     await new Promise(r => setTimeout(r, 800))
     
-    // If no Supabase connection is set, bypass logic for UI demonstration.
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-       setStatus("success");
-       return;
-    }
-
-    const dist = getDistanceClient(location.lat, location.lon, activeSession.latitude, activeSession.longitude)
-    setDistance(Math.round(dist))
-
-    if (dist <= activeSession.radius) {
-      await submitAttendance(activeSession.id, studentId)
-      setStatus("success")
-    } else {
+    // Pass real coordinates to the server action for validation
+    const res = await submitAttendance(activeSession.id, studentId, location.lat, location.lon)
+    
+    if (res?.error) {
+      if (res.type === 'technical') {
+        toast(res.error, 'error')
+      }
       setStatus("error")
-      setError(`Vous êtes à ${Math.round(dist)}m de l&apos;école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
+      setError(res.error)
+      return
     }
+
+    toast("Présence enregistrée !", 'success')
+    setStatus("success")
   }
 
   return (
@@ -109,24 +121,29 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
       </CardHeader>
       <CardContent className="pt-6">
         {error && (
-            <div role="alert" aria-live="assertive" className="mb-6 p-4 rounded-xl bg-destructive/10 text-destructive border border-destructive/20 flex gap-3 text-sm">
-                <XCircle className="shrink-0 mt-0.5" />
+            <div role="alert" aria-live="assertive" className={`mb-6 p-4 rounded-xl border flex gap-3 text-sm ${error.includes('technique') || error.includes('serveur') ? 'bg-destructive/10 text-destructive border-destructive/20' : 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20'}`}>
+                {error.includes('technique') ? <ShieldAlert className="shrink-0 mt-0.5" /> : <XCircle className="shrink-0 mt-0.5" />}
                 <p className="leading-relaxed">{error}</p>
             </div>
         )}
         
-        <div className="p-5 rounded-2xl bg-black/40 border border-white/5 flex items-center gap-5 shadow-inner">
-            <div className={`p-4 rounded-2xl ${location ? 'bg-primary/20 text-primary shadow-[0_0_20px_rgba(139,92,246,0.3)]' : 'bg-white/5 text-muted-foreground'}`}>
-                <MapPin className={!location ? 'animate-bounce' : ''} />
+        <div className="p-5 rounded-2xl bg-black/40 border border-white/5 flex items-center justify-between shadow-inner">
+            <div className="flex items-center gap-5">
+                <div className={`p-4 rounded-2xl ${location ? 'bg-primary/20 text-primary shadow-[0_0_20px_rgba(139,92,246,0.3)]' : 'bg-white/5 text-muted-foreground'}`}>
+                    <MapPin className={!location && !error ? 'animate-bounce' : ''} />
+                </div>
+                <div>
+                    <h4 className="font-semibold text-lg" aria-live="polite">{location ? "Position de votre appareil" : "Position indisponible"}</h4>
+                    <p className="text-sm text-muted-foreground mt-1 font-mono" aria-live="polite">
+                        {location 
+                            ? `Lat: ${location.lat.toFixed(4)}, Lon: ${location.lon.toFixed(4)}` 
+                            : error ? "Accès refusé ou erreur GPS" : "Recherche GPS en cours..."}
+                    </p>
+                </div>
             </div>
-            <div>
-                <h4 className="font-semibold text-lg" aria-live="polite">{location ? "Position de votre appareil" : "Recherche GPS en cours..."}</h4>
-                <p className="text-sm text-muted-foreground mt-1 font-mono" aria-live="polite">
-                    {location 
-                        ? `Lat: ${location.lat.toFixed(4)}, Lon: ${location.lon.toFixed(4)}` 
-                        : "Veuillez autoriser l&apos;accès au navigateur."}
-                </p>
-            </div>
+            <Button variant="ghost" size="sm" onClick={retryLocation} className="text-xs h-8">
+                Rafraîchir
+            </Button>
         </div>
       </CardContent>
       <CardFooter className="pt-2 pb-8 px-6">

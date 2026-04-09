@@ -39,6 +39,7 @@ function toRadians(degrees: number): number {
  * @param sessionLat 
  * @param sessionLon 
  * @param radius 
+ * @param tolerance Extra distance allowed (useful for server-side checks)
  * @returns boolean
  */
 export function isWithinRange(
@@ -46,8 +47,9 @@ export function isWithinRange(
   studentLon: number,
   sessionLat: number,
   sessionLon: number,
-  radius: number = 100
+  radius: number = 100,
+  tolerance: number = 0
 ): boolean {
   const distance = calculateDistance(studentLat, studentLon, sessionLat, sessionLon);
-  return distance <= radius;
+  return distance <= (radius + tolerance);
 }

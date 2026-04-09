@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Users, StopCircle, PlayCircle, Loader2, Check, X, ShieldAlert, PlusCircle, LayoutDashboard, Clock, ChevronDown, ChevronUp } from "lucide-react"
 import { createSession, closeSession } from "@/lib/actions"
 import { createGroup } from "@/lib/admin-actions"
+import { useToast } from "@/components/ui/toaster-minimal"
 
 export function TeacherDashboard({ groups, activeSession, attendanceStats, allStudents, pastSessions }: any) {
   const [activeTab, setActiveTab] = useState("session")
@@ -14,6 +15,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
   const [error, setError] = useState<string | null>(null)
   const [mockActive, setMockActive] = useState(false)
   const [expandedSessionId, setExpandedSessionId] = useState<string | null>(null)
+  const { toast } = useToast()
 
   // Group creation state
   const [newGroupName, setNewGroupName] = useState("")
@@ -28,19 +30,20 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
           async (pos) => {
-             if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-                 setTimeout(() => {
-                     setMockActive(true)
-                     setLoading(false)
-                 }, 800)
-                 return;
-             }
              const res = await createSession(selectedGroup, pos.coords.latitude, pos.coords.longitude, 100)
-             if (res.error) setError(res.error.message)
+             if (res?.error) {
+               if (res.type === 'technical') {
+                 toast(res.error, 'error')
+               } else {
+                 setError(res.error)
+               }
+             } else {
+               toast("Session d'appel ouverte avec succès !", 'success')
+             }
              setLoading(false)
           },
           (err) => {
-            setError("Veuillez autoriser la géolocalisation de votre navigateur pour fixer le point d&apos;appel de la classe.")
+            setError("Veuillez autoriser la géolocalisation de votre navigateur pour fixer le point d'appel de la classe.")
             setLoading(false)
           }
         )
@@ -52,12 +55,13 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
 
   const handleStopSession = async () => {
     setLoading(true)
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-        setMockActive(false)
-        setLoading(false)
-        return
+    if (!activeSession) return
+    const res = await closeSession(activeSession.id)
+    if (res?.error) {
+      toast("Erreur technique lors de la clôture de la session", 'error')
+    } else {
+      toast("Session clôturée", 'info')
     }
-    await closeSession(activeSession.id)
     setLoading(false)
   }
 
@@ -291,32 +295,40 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
       {activeTab === 'list' && (
           <div className="space-y-6">
               {groups.length === 0 ? (
-                  <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
-                      Vous n&apos;avez aucune classe d&apos;assignée pour le moment.
+                  <div className="flex flex-col items-center justify-center p-12 text-muted-foreground bg-black/20 rounded-2xl border-2 border-dashed border-white/5">
+                      <Users size={64} className="mb-6 opacity-20 text-primary" />
+                      <p className="text-xl font-bold text-white/80">Aucune classe pour le moment</p>
+                      <p className="text-sm mt-2 max-w-xs text-center">Utilisez l'onglet "Créer un Groupe" pour configurer votre première classe d'étudiants.</p>
                   </div>
               ) : (
                   groups.map((g: any) => (
-                      <Card key={g.id} className="glass-panel border-white/10">
-                           <CardHeader className="bg-primary/5 border-b border-white/5 pb-4">
-                               <CardTitle className="text-xl text-primary font-bold">{g.name}</CardTitle>
+                      <Card key={g.id} className="glass-panel border-white/10 overflow-hidden shadow-lg hover:shadow-primary/5 transition-all">
+                           <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent border-b border-white/5 pb-4">
+                               <CardTitle className="text-xl text-primary font-bold flex items-center gap-2">
+                                   <div className="w-2 h-8 bg-primary rounded-full mr-1" />
+                                   {g.name}
+                               </CardTitle>
                                <CardDescription>{g.students?.length || 0} étudiants inscrits</CardDescription>
                            </CardHeader>
-                           <CardContent className="pt-4">
-                               <div className="grid md:grid-cols-2 gap-3">
+                           <CardContent className="pt-6">
+                               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                    {g.students && g.students.length > 0 ? (
                                        g.students.map((s: any) => (
-                                           <div key={s.id} className="flex items-center gap-3 p-3 bg-black/30 rounded-lg border border-white/5 hover:bg-black/50 transition-colors">
-                                               <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center font-bold text-xs text-foreground">
+                                           <div key={s.id} className="flex items-center gap-3 p-3 bg-black/40 rounded-xl border border-white/5 hover:border-primary/30 transition-colors">
+                                               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-sm text-foreground">
                                                    {s.name?.charAt(0) || '?'}
                                                </div>
-                                               <div>
-                                                   <p className="text-sm font-bold">{s.name}</p>
-                                                   <p className="text-xs text-muted-foreground">{s.email}</p>
+                                               <div className="truncate">
+                                                   <p className="text-sm font-bold truncate">{s.name}</p>
+                                                   <p className="text-[10px] text-muted-foreground truncate">{s.email}</p>
                                                </div>
                                            </div>
                                        ))
                                    ) : (
-                                       <p className="text-sm text-muted-foreground italic col-span-2 p-2">Aucun étudiant n&apos;a été assigné à cette classe.</p>
+                                       <div className="col-span-full py-6 text-center bg-black/20 rounded-xl border border-dashed border-white/5">
+                                           <Users size={24} className="mx-auto mb-2 opacity-30" />
+                                           <p className="text-sm text-muted-foreground italic">Aucun étudiant n&apos;est encore assigné à cette classe.</p>
+                                       </div>
                                    )}
                                </div>
                            </CardContent>
@@ -327,7 +339,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
       )}
 
       {activeTab === 'history' && (
-          <Card className="glass-panel border-white/10">
+          <Card className="glass-panel border-white/10 shadow-2xl overflow-hidden">
               <CardHeader className="bg-primary/5 border-b border-white/5">
                   <CardTitle className="flex items-center gap-2">
                        <Clock className="text-primary" /> Historique des appels
@@ -336,8 +348,12 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
               </CardHeader>
               <CardContent className="pt-6">
                   {!pastSessions || pastSessions.length === 0 ? (
-                      <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
-                          Aucun historique d&apos;appel disponible.
+                      <div className="flex flex-col items-center justify-center py-20 text-muted-foreground">
+                          <div className="w-24 h-24 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10">
+                            <Clock size={48} className="opacity-20" />
+                          </div>
+                          <p className="text-xl font-bold text-white/80">Historique vide</p>
+                          <p className="text-sm mt-2 max-w-xs text-center">Vos sessions d'appel terminées apparaîtront ici pour consultation des statistiques.</p>
                       </div>
                   ) : (
                       <div className="space-y-4">

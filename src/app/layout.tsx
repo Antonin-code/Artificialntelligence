@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Navbar } from '@/components/navbar'
 import { createClient } from '@/lib/supabase/server'
+import { ToastProvider } from "@/components/ui/toaster-minimal"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,8 +30,10 @@ export default async function RootLayout({
     <html lang="fr" className="dark">
       <body className={inter.className}>
         <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30">
-          <Navbar user={user} role={dbUser?.role} status={dbUser?.status} />
-          {children}
+          <ToastProvider>
+            <Navbar user={user} role={dbUser?.role} status={dbUser?.status} />
+            {children}
+          </ToastProvider>
         </div>
       </body>
     </html>
