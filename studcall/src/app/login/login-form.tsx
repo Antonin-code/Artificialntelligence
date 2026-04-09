@@ -102,7 +102,7 @@ export function LoginForm() {
             {loading ? "Vérification en cours..." : "Se connecter"}
           </Button>
           <div className="text-sm text-center text-muted-foreground">
-             Pas encore de compte ? <a href="/register" className="text-primary font-semibold hover:underline">S'inscrire gratuitement</a>
+             Pas encore de compte ? <a href="/register" className="text-primary font-semibold hover:underline">S&apos;inscrire gratuitement</a>
           </div>
         </CardFooter>
       </form>

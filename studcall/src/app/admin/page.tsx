@@ -13,7 +13,7 @@ export default async function AdminPage() {
               <div className="p-3 bg-red-500/20 text-red-500 rounded-xl shadow-inner"><ShieldCheck size={32} /></div>
               <div>
                   <h1 className="text-3xl font-extrabold tracking-tight">Administration (Mode Démo)</h1>
-                  <p className="text-muted-foreground">La base de données n'est pas connectée. Données factices.</p>
+                  <p className="text-muted-foreground">La base de données n&apos;est pas connectée. Données factices.</p>
               </div>
             </div>
             
@@ -44,8 +44,8 @@ export default async function AdminPage() {
             <ShieldCheck size={32} />
         </div>
         <div>
-            <h1 className="text-3xl font-extrabold tracking-tight">Panneau d'Administration</h1>
-            <p className="text-muted-foreground">Gérez l'ensemble des accès et de la structure de l'établissement.</p>
+            <h1 className="text-3xl font-extrabold tracking-tight">Panneau d&apos;Administration</h1>
+            <p className="text-muted-foreground">Gérez l&apos;ensemble des accès et de la structure de l&apos;établissement.</p>
         </div>
       </div>
       

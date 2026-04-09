@@ -5,12 +5,12 @@ import { StudentDashboard } from "./student-dashboard"
 export default async function StudentPage() {
   const supabase = createClient()
   
-  // Contournement pour permettre le rendu visuel si la configuration Supabase n'est pas encore appliquée
+  // Contournement pour permettre le rendu visuel si la configuration Supabase n&apos;est pas encore appliquée
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
       return (
           <div className="p-6 md:p-12 max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold mb-4">Espace Étudiant (Mock)</h1>
-            <p className="mb-6 text-muted-foreground">La connexion Supabase n'est pas configurée. Interface simulée.</p>
+            <p className="mb-6 text-muted-foreground">La connexion Supabase n&apos;est pas configurée. Interface simulée.</p>
             <StudentDashboard activeSession={{id: "mock_session", radius: 100, latitude: 48.8566, longitude: 2.3522, groups: {name: "Développement Web IA"}}} studentId="mock_student" alreadyMarked={false} />
           </div>
       )

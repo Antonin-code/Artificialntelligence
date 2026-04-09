@@ -40,7 +40,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
              setLoading(false)
           },
           (err) => {
-            setError("Veuillez autoriser la géolocalisation de votre navigateur pour fixer le point d'appel de la classe.")
+            setError("Veuillez autoriser la géolocalisation de votre navigateur pour fixer le point d&apos;appel de la classe.")
             setLoading(false)
           }
         )
@@ -82,7 +82,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
             onClick={() => setActiveTab('session')}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${activeTab === 'session' ? 'bg-primary text-white shadow-lg' : 'hover:bg-white/5 text-muted-foreground'}`}
           >
-              <LayoutDashboard size={16} /> Session d'appel
+              <LayoutDashboard size={16} /> Session d&apos;appel
           </button>
           <button 
             onClick={() => setActiveTab('manage')}
@@ -124,7 +124,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
                              <p className="font-bold text-xl text-primary/90">{activeSession?.groups?.name || 'Groupe Test (Mock)'}</p>
                          </div>
                          <div className="p-4 bg-black/30 rounded-xl border border-white/5">
-                             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Taux d'Émargement</p>
+                             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Taux d&apos;Émargement</p>
                              <div className="flex items-baseline gap-2">
                                  <p className="font-extrabold text-5xl text-white">{attendanceStats.length > 0 ? attendanceStats.filter((s:any) => s.isPresent).length : 0}</p>
                                  <p className="text-xl font-medium text-muted-foreground">/ {attendanceStats.length}</p>
@@ -137,7 +137,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
                      <CardFooter className="pb-6 px-6">
                          <Button variant="destructive" className="w-full h-12 shadow-[0_0_15px_rgba(239,68,68,0.3)] hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all" onClick={handleStopSession} disabled={loading}>
                              {loading ? <Loader2 className="animate-spin mr-2" size={18} /> : <StopCircle className="mr-2" size={18} />}
-                             Clôturer l'appel
+                             Clôturer l&apos;appel
                          </Button>
                      </CardFooter>
                  </Card>
@@ -196,7 +196,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-blue-500/30 text-primary rounded-2xl flex items-center justify-center mb-6 shadow-inner ring-1 ring-white/10">
                       <MapPin size={32} />
                   </div>
-                  <CardTitle className="text-3xl font-extrabold mb-2">Lancer l'appel</CardTitle>
+                  <CardTitle className="text-3xl font-extrabold mb-2">Lancer l&apos;appel</CardTitle>
                   <CardDescription className="text-base text-muted-foreground/80">
                       Ouvrez une session géolocalisée. Seuls les étudiants pourront valider leur présence.
                   </CardDescription>
@@ -205,7 +205,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
                   {error && <div className="p-4 bg-destructive/10 text-destructive text-sm rounded-xl border border-destructive/20 shadow-inner">{error}</div>}
                   
                   {groups.length === 0 ? (
-                      <div className="p-4 bg-black/30 rounded-xl text-muted-foreground text-center text-sm border border-dashed border-white/20">Vous n'avez aucun groupe. Utilisez l'onglet "Créer un Groupe".</div>
+                      <div className="p-4 bg-black/30 rounded-xl text-muted-foreground text-center text-sm border border-dashed border-white/20">Vous n&apos;avez aucun groupe. Utilisez l&apos;onglet &quot;Créer un Groupe&quot;.</div>
                   ) : (
                       <div className="space-y-3">
                           <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Sélectionnez la classe</label>
@@ -239,7 +239,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
           <Card className="max-w-2xl mx-auto glass-panel border-white/10 overflow-hidden">
                <CardHeader className="bg-primary/5 border-b border-white/5">
                   <CardTitle className="flex items-center gap-2">
-                       <PlusCircle className="text-primary" /> Créer un nouveau groupe d'étudiants
+                       <PlusCircle className="text-primary" /> Créer un nouveau groupe d&apos;étudiants
                   </CardTitle>
                   <CardDescription>Définissez le nom de la classe et sélectionnez les étudiants membres.</CardDescription>
               </CardHeader>
@@ -292,7 +292,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
           <div className="space-y-6">
               {groups.length === 0 ? (
                   <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
-                      Vous n'avez aucune classe d'assignée pour le moment.
+                      Vous n&apos;avez aucune classe d&apos;assignée pour le moment.
                   </div>
               ) : (
                   groups.map((g: any) => (
@@ -316,7 +316,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
                                            </div>
                                        ))
                                    ) : (
-                                       <p className="text-sm text-muted-foreground italic col-span-2 p-2">Aucun étudiant n'a été assigné à cette classe.</p>
+                                       <p className="text-sm text-muted-foreground italic col-span-2 p-2">Aucun étudiant n&apos;a été assigné à cette classe.</p>
                                    )}
                                </div>
                            </CardContent>
@@ -337,7 +337,7 @@ export function TeacherDashboard({ groups, activeSession, attendanceStats, allSt
               <CardContent className="pt-6">
                   {!pastSessions || pastSessions.length === 0 ? (
                       <div className="p-8 text-center text-muted-foreground bg-black/20 rounded-xl border border-dashed border-white/5">
-                          Aucun historique d'appel disponible.
+                          Aucun historique d&apos;appel disponible.
                       </div>
                   ) : (
                       <div className="space-y-4">

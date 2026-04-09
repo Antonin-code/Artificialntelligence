@@ -44,7 +44,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
           <CardDescription className="text-lg">
             {alreadyMarked 
               ? `Vous êtes bien enregistré pour le cours de ${activeSession?.groups?.name || 'votre groupe'}.`
-              : "Votre présence vient d'être enregistrée avec succès."}
+              : "Votre présence vient d&apos;être enregistrée avec succès."}
           </CardDescription>
         </CardHeader>
       </Card>
@@ -56,8 +56,8 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
       <Card className="glass-panel text-center py-16 px-4">
         <CardContent className="flex flex-col items-center justify-center text-muted-foreground p-0">
             <AlertCircle size={56} className="mb-6 opacity-40 text-primary" />
-            <p className="text-xl font-medium">Aucune session d'appel active</p>
-            <p className="text-base mt-2">Attendez que votre enseignant lance l'appel pour votre groupe.</p>
+            <p className="text-xl font-medium">Aucune session d&apos;appel active</p>
+            <p className="text-base mt-2">Attendez que votre enseignant lance l&apos;appel pour votre groupe.</p>
         </CardContent>
       </Card>
     )
@@ -84,7 +84,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
       setStatus("success")
     } else {
       setStatus("error")
-      setError(`Vous êtes à ${Math.round(dist)}m de l'école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
+      setError(`Vous êtes à ${Math.round(dist)}m de l&apos;école. Vous devez être dans un rayon de ${activeSession.radius}m.`)
     }
   }
 
@@ -124,7 +124,7 @@ export function StudentDashboard({ activeSession, studentId, alreadyMarked }: St
                 <p className="text-sm text-muted-foreground mt-1 font-mono">
                     {location 
                         ? `Lat: ${location.lat.toFixed(4)}, Lon: ${location.lon.toFixed(4)}` 
-                        : "Veuillez autoriser l'accès au navigateur."}
+                        : "Veuillez autoriser l&apos;accès au navigateur."}
                 </p>
             </div>
         </div>

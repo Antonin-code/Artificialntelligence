@@ -19,7 +19,7 @@ export default function Home() {
           StudCall
         </h1>
         <p className="text-xl sm:text-2xl text-muted-foreground mb-10 font-light leading-relaxed">
-          L'appel automatique par proximité géographique. Gagnez du temps administratif, sécurisez la présence.
+          L&apos;appel automatique par proximité géographique. Gagnez du temps administratif, sécurisez la présence.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -50,7 +50,7 @@ export default function Home() {
               <ShieldCheck size={24} />
             </div>
             <h3 className="font-semibold text-lg">100% Autonome</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">Les étudiants valident eux-mêmes. Fini l'appel manuel chronophage.</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">Les étudiants valident eux-mêmes. Fini l&apos;appel manuel chronophage.</p>
           </div>
         </div>
       </div>
