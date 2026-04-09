@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Teacher relationships
+  taughtGroups Group[] @relation("TaughtGroups")
+
+  // Student relationships
+  enrolledGroups GroupMember[]
+  attendanceRecords AttendanceRecord[]
+}
+
+model Group {
+  id        String   @id @default(uuid())
+  name      String
+  teacherId String
+  teacher   User     @relation("TaughtGroups", fields: [teacherId], references: [id])
+  createdAt DateTime @default(now())
+
+  members   GroupMember[]
+  sessions  AttendanceSession[]
+}
+
+model GroupMember {
+  groupId   String
+  studentId String
+  group     Group    @relation(fields: [groupId], references: [id])
+  student   User     @relation(fields: [studentId], references: [id])
+
+  @@id([groupId, studentId])
+}
+
+model AttendanceSession {
+  id         String   @id @default(uuid())
+  groupId    String
+  group      Group    @relation(fields: [groupId], references: [id])
+  isActive   Boolean  @default(true)
+  latitude   Float
+  longitude  Float
+  radius     Float    @default(100.0) // in meters
+  createdAt  DateTime @default(now())
+  closedAt   DateTime?
+
+  records    AttendanceRecord[]
+}
+
+model AttendanceRecord {
+  id        String            @id @default(uuid())
+  sessionId String
+  session   AttendanceSession @relation(fields: [sessionId], references: [id])
+  studentId String
+  student   User              @relation(fields: [studentId], references: [id])
+  status    String            @default("present")
+  timestamp DateTime          @default(now())
+
+  @@unique([sessionId, studentId])
+}

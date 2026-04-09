@@ -3,108 +3,52 @@
     "3655b43ca6098833b90f99f4beee91696d1a48fb": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
-        "app/login/page": "rsc",
-        "app/teacher/page": "rsc"
+        "app/register/page": "rsc",
+        "app/login/page": "rsc"
       }
     },
     "3d884b9f2b0a37dfd4110c84b160228a018c6300": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
-        "app/login/page": "rsc",
-        "app/teacher/page": "rsc"
+        "app/register/page": "rsc",
+        "app/login/page": "rsc"
       }
     },
     "9dfbaab0b9da4be6d5cffa38651830aef48ada4a": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
-        "app/login/page": "rsc",
-        "app/teacher/page": "rsc"
+        "app/register/page": "rsc",
+        "app/login/page": "rsc"
       }
     },
     "e8ea5dbb8b8ff0c0894334041318ef7c580b6828": {
       "workers": {
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/teacher/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/page": "rsc",
-        "app/login/page": "rsc",
-        "app/teacher/page": "rsc"
-      }
-    },
-    "04a1e84b372f5ad92313bf6909c099d60511e463": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "1b04b75c4b31722633dcd933fb25014d51fd5596": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "1c97c294e4fd4fed170d34949cea63305b84801a": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "45e672f9209b1ff99c1f502a757c59db2f19f2d5": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "5fe83647bfeac8c8675a91e6e848eb1c4aaddd32": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "e1139e532071163e7ab13de439ad92be681b4c31": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
-      }
-    },
-    "f6d38bec39db91bd986846eb93e27652dc5c2d48": {
-      "workers": {
-        "app/teacher/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cadmin-actions.ts%22%2C%5B%22approveUserAccount%22%2C%22deleteGroup%22%2C%22rejectUserAccount%22%2C%22banUserAccount%22%2C%22updateUserAccount%22%2C%22createGroup%22%2C%22updateGroup%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/teacher/page": "action-browser"
+        "app/register/page": "rsc",
+        "app/login/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "EELcVehluZvYX7mHmUrA4erLdJi9qc9IutwYl/a/KAw="
+  "encryptionKey": "L+9W0a2JETrYjxA0qpD3NW1FoSCfpX5biVpvfrD6qCM="
 }
