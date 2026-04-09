@@ -1293,6 +1293,9 @@ video {
 .bg-primary\/5 {
   background-color: hsl(var(--primary) / 0.05);
 }
+.bg-purple-500\/10 {
+  background-color: rgb(168 85 247 / 0.1);
+}
 .bg-purple-500\/20 {
   background-color: rgb(168 85 247 / 0.2);
 }

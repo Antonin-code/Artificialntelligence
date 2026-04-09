@@ -1,54 +1,38 @@
 {
   "node": {
-    "3655b43ca6098833b90f99f4beee91696d1a48fb": {
+    "28efbd282cdcfa6eb0fca0b704cda650033eab0b": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22closeSession%22%2C%22signOut%22%2C%22createSession%22%2C%22submitAttendance%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc",
-        "app/register/page": "rsc",
-        "app/login/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "3d884b9f2b0a37dfd4110c84b160228a018c6300": {
+    "5464d898e9bb4182d983d04cc36b8f6ac1926e9b": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22closeSession%22%2C%22signOut%22%2C%22createSession%22%2C%22submitAttendance%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc",
-        "app/register/page": "rsc",
-        "app/login/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "9dfbaab0b9da4be6d5cffa38651830aef48ada4a": {
+    "a833123c0f546296eee144bc8a8a5784980b794b": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22closeSession%22%2C%22signOut%22%2C%22createSession%22%2C%22submitAttendance%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc",
-        "app/register/page": "rsc",
-        "app/login/page": "rsc"
+        "app/page": "rsc"
       }
     },
-    "e8ea5dbb8b8ff0c0894334041318ef7c580b6828": {
+    "f5d72529087a97782f7a41fb7f32c9d8f01cec40": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/register/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!",
-        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CLucas%20BAUDIN%5C%5CDesktop%5C%5CArtificialntelligence%5C%5Cstudcall%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22signOut%22%2C%22submitAttendance%22%2C%22createSession%22%2C%22closeSession%22%5D%5D%5D&__client_imported__=!"
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CSemaine%20IA%5C%5CProjectIA%5C%5CArtificialntelligence%5C%5Csrc%5C%5Clib%5C%5Cactions.ts%22%2C%5B%22closeSession%22%2C%22signOut%22%2C%22createSession%22%2C%22submitAttendance%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc",
-        "app/register/page": "rsc",
-        "app/login/page": "rsc"
+        "app/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "L+9W0a2JETrYjxA0qpD3NW1FoSCfpX5biVpvfrD6qCM="
+  "encryptionKey": "6Tt6+F5zIHIiEhoNiq5N8hxpdIVjo/uMa+uYy53j4RM="
 }
