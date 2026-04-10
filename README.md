@@ -1,93 +1,158 @@
-# StudCall - L'appel automatique par proximité géographique
+<div align="center">
+  <img src="./studcall_logo_1775805578453.png" alt="StudCall Logo" width="200" />
+  <h1>🚀 StudCall</h1>
+  <p><strong>L'appel automatisé par proximité géographique.</strong></p>
 
-Bienvenue sur la documentation centrale du projet **StudCall**. StudCall est une application moderne permettant de gérer l'émargement des étudiants en utilisant la géolocalisation pour valider leur présence.
-
----
-
-## 1. Vision et Périmètre
-
-**Problème résolu :** La perte de temps administratif lors de l'appel manuel dans les établissements scolaires.
-**Valeur principale :** Permettre aux élèves de s'émarger en toute autonomie via leur smartphone ou ordinateur, sous condition d'être physiquement présents dans le périmètre autorisé de l'école (Géolocalisation).
-
-**Utilisateurs cibles :**
-- **Administrateurs :** Gèrent les comptes (enseignants/élèves) et les groupes.
-- **Enseignants :** Ouvrent et gèrent les sessions d'appel.
-- **Étudiants :** Valident leur présence par géolocalisation.
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+  [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=flat-square&logo=prisma)](https://www.prisma.io/)
+  [![Typescript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+  [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+</div>
 
 ---
 
-## 2. Architecture & Technologies
+## 📖 À propos
 
-Le projet repose sur une approche de type *Backend-as-a-Service* avec une interface moderne :
-- **Framework Front/Back :** Next.js 14+ (App Router) en TypeScript
-- **Interface UI :** Tailwind CSS, Shadcn UI, Radix UI, Lucide Icons
-- **Backend & Base de données :** Supabase (Authentication, PostgreSQL)
-- **Logique Métier/Hardware :** Geolocation API (Navigateur), calcul de distance (Haversine)
-- **Tests :** Vitest, React Testing Library
+**StudCall** est une solution moderne destinée aux établissements scolaires pour simplifier et sécuriser la prise de présence. En s'appuyant sur la **Géo-validation**, l'application permet aux étudiants de valider leur présence en un clic, uniquement s'ils se trouvent dans le périmètre défini par l'enseignant.
+
+### 🌟 Points forts
+- **Gain de temps** : Fini l'appel manuel interminable.
+- **Fiabilité** : Validation par coordonnées GPS précises.
+- **Transparence** : Historique des présences consultable en temps réel par les enseignants et les élèves.
+- **Flexibilité** : Fonctionne sur n'importe quel appareil doté d'un navigateur moderne.
 
 ---
 
-## 3. Prérequis et Installation
+## ✨ Fonctionnalités
 
-### Prérequis Systèmes
-- **Node.js** (v18.x ou supérieur)
-- **npm** (inclus avec Node.js)
-- **Git**
-- **Instance Supabase** (Cloud ou Locale avec Supabase CLI)
+### 👨‍🏫 Pour les Enseignants
+- **Gestion des Groupes** : Créez et gérez vos classes facilement.
+- **Ouverture de session** : Lancez un appel en définissant une position et un rayon de tolérance.
+- **Monitoring en direct** : Visualisez qui s'est émargé en temps réel.
+- **Clôture sécurisée** : Fermez les sessions manuellement ou automatiquement.
 
-### Dépendances et Code Source
+### 🎓 Pour les Étudiants
+- **Émargement rapide** : Un bouton unique pour valider sa présence.
+- **Tableau de bord** : Suivi des absences et des participations.
+- **Profil personnel** : Gestion des informations de compte.
+
+### 🛡️ Pour les Administrateurs
+- **Validation des comptes** : Système d'approbation pour garantir la sécurité.
+- **Gestion globale** : Supervision de l'ensemble de la plateforme.
+
+---
+
+## 🛠️ Stack Technique
+
+- **Frontend** : Next.js 14 (App Router), React 18, Tailwind CSS.
+- **Composants** : Radix UI, Lucide React, Shadcn/UI.
+- **Backend & Database** : Prisma ORM, MySQL, Supabase (Auth).
+- **Infrastructure** : Docker & Docker Compose.
+- **Tests** : Vitest, React Testing Library.
+
+---
+
+## 🚀 Démarrage Rapide
+
+### 1. Prérequis
+- [Node.js](https://nodejs.org/) (v18+)
+- [Docker](https://www.docker.com/) (recommandé pour la base de données)
+- [Git](https://git-scm.com/)
+
+### 2. Installation
 ```bash
-# Cloner le dépôt
-git clone <URL_DU_DEPOT>
+# Cloner le projet
+git clone https://github.com/Antonin-code/Artificialntelligence.git
+
+# Accéder au dossier
 cd Artificialntelligence
 
 # Installer les dépendances
 npm install
 ```
 
-### Variables d'Environnement
-Créer un fichier `.env.local` à la racine du projet :
+### 3. Configuration
+Créez un fichier `.env.local` à la racine :
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://<votre-id-projet>.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<votre-cle-anonyme>
+# Database (si usage local)
+DATABASE_URL="mysql://root:root_password@localhost:3306/studcall_db"
+
+# Supabase Auth
+NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 ```
-*(Nb. Aucune variable d'environnement sensible ne doit être ajoutée ou poussée sur le dépôt GIT.)*
 
----
-
-## 4. Exploitation et Lancement
-
-### 🖥️ Lancement Local (Développement)
+### 4. Lancement avec Docker (Recommandé)
 ```bash
+# Lance l'application et la base de données MySQL
+docker-compose up -d
+```
+L'application sera disponible sur `http://localhost:3000`.
+
+### 5. Lancement Développement (Sans Docker)
+```bash
+# Lancer le serveur de dev
 npm run dev
 ```
-L'application est servie sur : `http://localhost:3000`
-
-### 📜 Journaux (Logs) et Monitoring
-- En local, les journaux s'affichent directement dans la console d'exécution Node.js ou Next.js.
-- Les logs de sécurité Supabase sont consultables dans le dashboard Supabase.
-
-### ⚠️ Limites Connues
-- **GPS et Navigateur :** La *Geolocation API* des navigateurs nécessite un contexte sécurisé (HTTPS ou `localhost`).
-- **Précision GPS :** En intérieur, la géolocalisation mobile peut avoir une marge d'erreur pouvant atteindre 20 à 30 mètres (Tolérance de 10m appliquée côté serveur).
 
 ---
 
-## 5. Tests et Qualité
-```bash
-# Vérification de linting et de typage
-npm run lint
+## 📁 Structure du Projet
 
-# Lancement des tests (Vitest)
-npm run test
+```text
+.
+├── prisma/             # Schéma et migrations de la base de données
+├── src/
+│   ├── app/           # Routes et Pages (App Router)
+│   ├── components/    # Composants UI réutilisables
+│   ├── lib/           # Utilitaires et configuration (Supabase, Prisma)
+│   └── types/         # Définitions TypeScript
+├── public/            # Assets statiques
+├── MD/                # Documentation détaillée par US
+└── docker-compose.yml # Configuration de l'infrastructure
 ```
 
 ---
 
-## 6. Structure du Projet
-- `src/app` : Routes et pages de l'application.
-- `src/components` : Composants UI réutilisables.
-- `src/lib` : Utilitaires et configuration.
-- `src/test` : Configuration des tests.
-- `prisma` : Schéma de la base de données (documentation).
-- `supabase` : Migrations et configuration SQL.
+## 🧪 Tests et Qualité
+
+Nous accordons une grande importance à la fiabilité du système.
+```bash
+# Lancer les tests unitaires
+npm run test
+
+# Analyse du code (Linting)
+npm run lint
+```
+
+---
+
+## 📄 Documentation détaillée
+
+Pour plus d'informations techniques, consultez les fiches de conception dans le dossier `MD/` :
+- [Architecture & Décisions](file:///c:/Semaine%20IA/ProjectIA/Artificialntelligence/MD/ARCHITECTURE_US12.md)
+- [Guide de Sécurité](file:///c:/Semaine%20IA/ProjectIA/Artificialntelligence/MD/AGENT_SAFEGUARDS.md)
+- [Log des décisions](file:///c:/Semaine%20IA/ProjectIA/Artificialntelligence/MD/DECISIONS_LOG_US16.md)
+
+---
+
+## 🤝 Contribution
+
+1. Forkez le projet.
+2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`).
+3. Commentez vos changements (`git commit -m 'Add some AmazingFeature'`).
+4. Pushez vers la branche (`git push origin feature/AmazingFeature`).
+5. Ouvrez une Pull Request.
+
+---
+
+## ⚖️ Licence
+
+Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
+
+---
+
+<div align="center">
+  Développé avec ❤️ par l'équipe Artificialntelligence
+</div>
