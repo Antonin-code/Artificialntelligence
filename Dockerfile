@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Dockerfile
 # syntax=docker/dockerfile:1
 
 # 1. Base image for dependencies
@@ -54,3 +55,20 @@ ENV HOSTNAME "0.0.0.0"
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 CMD ["node", "server.js"]
+=======
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Génère le client Prisma pour MySQL
+RUN npx prisma generate
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
+>>>>>>> features/ll:studcall/Dockerfile
