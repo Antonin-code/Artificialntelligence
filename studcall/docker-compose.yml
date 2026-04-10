@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Service de la base de données
+  db:
+    image: mysql:8.0
+    container_name: studcall-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: studcall_db
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  # Service de l'application Next.js
+  app:
+    build: .
+    container_name: studcall-app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=mysql://root:root_password@db:3306/studcall_db
+    depends_on:
+      - db
+
+volumes:
+  db_data:
